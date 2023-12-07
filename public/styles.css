@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--charcoal-grey);
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: var(--dark-slate-grey);
+  font-size: 3rem;
+  font-weight: bold;
+
+  margin-top: 90px;
+  margin-left: 10%;
+}
+
+p {
+  margin-left: 10%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+
+  margin-left: 10%;
+  line-height: 30px;
+}
+
+form {
+  margin-left: 10%;
+}
+
+input {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* container */
+.newsletter {
+  border-radius: 40px;
+  background: var(--white);
+
+  margin: 50px auto;
+  width: 1000px;
+  height: 615px;
+
+  display: flex;
+  gap: 2rem;
+
+  flex-direction: row;
+  justify-content: center; /* Horizontal centering */
+}
+
+.left {
+  align-self: flex-end;
+
+  height: 100%;
+  width: 50%;
+}
+
+.right {
+  align-self: flex-start;
+
+  height: 100%;
+  width: 50%;
+}
+
+.listCheckMark {
+  margin-right: 5%;
+}
+
+.imageIn {
+  background-image: url("illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+}
+
+.inputText {
+  margin-top: 10px;
+
+  /*  height: 45px;
+  width: 321px; */
+
+  width: 95%;
+  height: 45px;
+
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid var(--grey);
+}
+
+.inputSubmit {
+  margin-top: 15px;
+
+  /*
+  width: 330px;
+  height: 55px; */
+
+  width: 96%;
+  height: 55px;
+
+  border-radius: 8px;
+  color: var(--white);
+  background: var(--dark-slate-grey);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.inputSubmit:hover {
+  /* background: var(--tomato); */
+  background: rgb(255, 84, 120);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 84, 120, 1) 0%,
+    rgba(255, 94, 92, 1) 35%,
+    rgba(255, 103, 62, 1) 100%
+  );
+
+  border: 1px solid var(--tomato);
+  box-shadow: 5px 3px 3px tomato;
+}
+
+.errorMessage {
+  /*  display: block; */
+  color: var(--tomato);
+  font-weight: bold;
+  margin-left: 38%;
+}
+
+.successfulMessage {
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 50px;
+  z-index: 1000;
+  border-radius: 45px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(234, 29%, 20%, 0.7);
+  z-index: 1000;
+}
+
+.listCheckMarkSuccess {
+  height: 80px;
+}
+
+.headingSuccessful {
+  color: var(--dark-slate-grey);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.paragraphSuccessful {
+  line-height: 25px;
+  font-size: 1.2rem;
+}
